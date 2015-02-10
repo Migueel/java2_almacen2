@@ -18,7 +18,7 @@ public class Distribuidor {
 
 	public Distribuidor(){}
 
-//métodos getter y setter
+//metodos getter y setter
 
 	public String getNombre(){
 		return nombre;
@@ -89,6 +89,7 @@ public class Distribuidor {
 				entero = Integer.parseInt(campos2[3]);
 				contacto.setEdad(entero);
 				distribuidor.setPersonaContacto(contacto);
+				
 				distribuidores.add(distribuidor);
 				linea = br.readLine();
 			}
@@ -96,7 +97,7 @@ public class Distribuidor {
 				Direccion direc = new Direccion();
 				Contacto contact = new Contacto();
 				
-				System.out.println("\nProveedor nº: " + (i + 1));
+				System.out.println("\nProveedor n�: " + (i + 1));
 				System.out.println("****************************");
 				System.out.println("Nombre: " + (distribuidores.get(i).getNombre()));
 				System.out.println("Cif: " + (distribuidores.get(i).getCif()));

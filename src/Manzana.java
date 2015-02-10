@@ -15,7 +15,7 @@ public class Manzana {
 
 	public Manzana(){}
 
-//mÃ©todos getter y setter
+//metodos getter y setter
 
 	public String getTipoManzana(){
 		return tipoManzana;
@@ -52,7 +52,7 @@ public class Manzana {
 		Scanner sc = new Scanner(System.in);
 		ArrayList<Manzana> manzanas = new ArrayList<Manzana>();
 		
-		System.out.println("\nÂ¿Cuantas manzanas quieres insertar?: ");
+		System.out.println("\n¿Cuantas manzanas quieres insertar?: ");
 		int opcion = sc.nextInt();
 		
 		for(int m = 0; m < opcion; m++) {
@@ -64,7 +64,7 @@ public class Manzana {
 			manzana.setProcedencia(sc.next());
 			System.out.println("Color: ");
 			manzana.setColor(sc.next());
-			System.out.println("â‚¬/Uni: ");
+			System.out.println("€/U : ");
 			manzana.setEurosKilo(sc.nextDouble());
 			System.out.println("Nombre del distribuidor: ");
 			Distribuidor distribuidor = new Distribuidor();

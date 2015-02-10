@@ -16,7 +16,7 @@ public class Lechuga {
 
 	public Lechuga(){}
 
-//m√©todos getter y setter
+//metodos getter y setter
 
 	public String getTipoLechuga(){
 		return tipoLechuga;
@@ -49,7 +49,7 @@ public class Lechuga {
 		this.distribuidor = distribuidor;
 	}
 	
-	public void crearLechuga(){
+	public static void crearLechuga(){
 		
 		ArrayList<Lechuga> lechugas = new ArrayList<Lechuga>();
 		Scanner sc = new Scanner(System.in);
@@ -84,12 +84,12 @@ public class Lechuga {
 		System.out.println("\nLechugas: \n");
 		
 		for(int m = 0; m < lechugas.size(); m++) {
-			System.out.println("Lechuga n¬∫" + (m + 1));
+			System.out.println("Lechuga n∫" + (m + 1));
 			System.out.println("***********************");
 			System.out.println("Tipo de lechuga: "+(lechugas.get(m).getTipoLechuga()));
 			System.out.println("Prcedencia: "+(lechugas.get(m).getProcedencia()));
 			System.out.println("Color: "+(lechugas.get(m).getColor()));
-			System.out.println("‚Ç¨/Kg: "+(lechugas.get(m).getEurosUnidad()));
+			System.out.println("Ä/Kg: "+(lechugas.get(m).getEurosUnidad()));
 			Distribuidor distribuidor = lechugas.get(m).getDistribuidor();
 			System.out.println("Distribuidor: ");
 			System.out.println("\tNombre: "+distribuidor.getNombre());
@@ -100,7 +100,7 @@ public class Lechuga {
 			System.out.println("\t\tTelefono: "+(distribuidor.getPersonaContacto()).getTelefono());
 			//direccion
 			System.out.println("\t\tCiudad: "+(distribuidor.getDireccion()).getCiudad());
-			System.out.println("\t\tC√≥digo postal: "+(distribuidor.getDireccion()).getCodigoPostal());
+			System.out.println("\t\tCÛdigo postal: "+(distribuidor.getDireccion()).getCodigoPostal());
 			System.out.println("\t\tCalle: "+(distribuidor.getDireccion()).getCalle());
 			System.out.println("\t\tNumero: "+(distribuidor.getDireccion()).getNumero());
 		}

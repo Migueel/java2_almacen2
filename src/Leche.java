@@ -15,7 +15,7 @@ public class Leche {
 
 	public Leche(){}
 
-//mÃ©todos getter y setter
+//metodos getter y setter
 	
 	public String getTipoLeche(){
 		return tipoLeche;
@@ -45,7 +45,7 @@ public class Leche {
 		
 		ArrayList<Leche> leches = new ArrayList<Leche>();
 		Scanner sc = new Scanner(System.in);
-		System.out.println("\nÂ¿Cuantas variedades de leche quieres insertar?: ");
+		System.out.println("\n¿Cuantas variedades de leche quieres insertar?: ");
 		int opcion = sc.nextInt();
 		
 		for(int l = 0; l < opcion; l++) {
@@ -54,7 +54,7 @@ public class Leche {
 			leche.setTipoLeche(sc.next());
 			System.out.println("Procedencia de la leche: ");
 			leche.setProcedencia(sc.next());
-			System.out.println("â‚¬/litrs: ");
+			System.out.println("€/litro: ");
 			leche.setEurosLitro(sc.nextDouble());
 			System.out.println("Nombre del distribuidor: ");
 		
@@ -72,11 +72,11 @@ public class Leche {
 		System.out.println("\nLeche: \n");
 		
 		for(int m = 0; m < leches.size(); m++) {
-			System.out.println("Variedad de leche nÂº" + (m + 1));
+			System.out.println("Variedad de leche nº" + (m + 1));
 			System.out.println("************************************");
 			System.out.println("Tipo de leche: "+(leches.get(m).getTipoLeche()));
 			System.out.println("Prcedencia: "+(leches.get(m).getProcedencia()));
-			System.out.println("â‚¬/litro: "+(leches.get(m).getEurosLitro()));
+			System.out.println("€/L: "+(leches.get(m).getEurosLitro()));
 			Distribuidor distribuidor = leches.get(m).getDistribuidor();
 			System.out.println("Distribuidor: ");
 			System.out.println("\tNombre: "+distribuidor.getNombre());
@@ -87,7 +87,7 @@ public class Leche {
 			System.out.println("\t\tTelefono: "+(distribuidor.getPersonaContacto()).getTelefono());
 			//direccion
 			System.out.println("\t\tCiudad: "+(distribuidor.getDireccion()).getCiudad());
-			System.out.println("\t\tCÃ³digo postal: "+(distribuidor.getDireccion()).getCodigoPostal());
+			System.out.println("\t\tCódigo postal: "+(distribuidor.getDireccion()).getCodigoPostal());
 			System.out.println("\t\tCalle: "+(distribuidor.getDireccion()).getCalle());
 			System.out.println("\t\tNumero: "+(distribuidor.getDireccion()).getNumero());
 		}
