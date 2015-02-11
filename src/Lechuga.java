@@ -2,15 +2,13 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 
-public class Lechuga {
+public class Lechuga extends Producto{
 
 //propiedades
 
 	private String tipoLechuga;
-	private String procedencia;
 	private String color;
 	private Double eurosUnidad;
-	private Distribuidor distribuidor;
 
 //constructor
 
@@ -24,12 +22,6 @@ public class Lechuga {
 	public void setTipoLechuga(String tipoLechuga) {
 		this.tipoLechuga = tipoLechuga;
 	}
-	public String getProcedencia(){
-		return procedencia;
-	}
-	public void setProcedencia(String procedencia){
-		this.procedencia = procedencia;
-	}
 	public String getColor(){
 		return color;
 	}
@@ -41,12 +33,6 @@ public class Lechuga {
 	}
 	public void setEurosUnidad(Double eurosUnidad){
 		this.eurosUnidad = eurosUnidad;
-	}
-	public Distribuidor getDistribuidor(){
-		return distribuidor;
-	}
-	public void setDistribuidor(Distribuidor distribuidor){
-		this.distribuidor = distribuidor;
 	}
 	
 	public static void crearLechuga(){
@@ -84,12 +70,12 @@ public class Lechuga {
 		System.out.println("\nLechugas: \n");
 		
 		for(int m = 0; m < lechugas.size(); m++) {
-			System.out.println("Lechuga nº" + (m + 1));
-			System.out.println("***********************");
+			System.out.println("Lechuga nÂº" + (m + 1));
+			System.out.println("------------");
 			System.out.println("Tipo de lechuga: "+(lechugas.get(m).getTipoLechuga()));
 			System.out.println("Prcedencia: "+(lechugas.get(m).getProcedencia()));
 			System.out.println("Color: "+(lechugas.get(m).getColor()));
-			System.out.println("€/Kg: "+(lechugas.get(m).getEurosUnidad()));
+			System.out.println("â‚¬/Kg: "+(lechugas.get(m).getEurosUnidad()));
 			Distribuidor distribuidor = lechugas.get(m).getDistribuidor();
 			System.out.println("Distribuidor: ");
 			System.out.println("\tNombre: "+distribuidor.getNombre());
@@ -100,7 +86,7 @@ public class Lechuga {
 			System.out.println("\t\tTelefono: "+(distribuidor.getPersonaContacto()).getTelefono());
 			//direccion
 			System.out.println("\t\tCiudad: "+(distribuidor.getDireccion()).getCiudad());
-			System.out.println("\t\tCódigo postal: "+(distribuidor.getDireccion()).getCodigoPostal());
+			System.out.println("\t\tCï¿½digo postal: "+(distribuidor.getDireccion()).getCodigoPostal());
 			System.out.println("\t\tCalle: "+(distribuidor.getDireccion()).getCalle());
 			System.out.println("\t\tNumero: "+(distribuidor.getDireccion()).getNumero());
 		}

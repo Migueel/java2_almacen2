@@ -1,15 +1,13 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Manzana {
+public class Manzana extends  Producto{
 
 //propiedades
 
 	private String tipoManzana;
-	private String procedencia;
 	private String color;
 	private Double eurosKilo;
-	private Distribuidor distribuidor;
 
 //constructor
 
@@ -23,12 +21,6 @@ public class Manzana {
 	public void setTipoManzana(String tipoManzana) {
 		this.tipoManzana = tipoManzana;
 	}
-	public String getProcedencia(){
-		return procedencia;
-	}
-	public void setProcedencia(String procedencia){
-		this.procedencia = procedencia;
-	}
 	public String getColor(){
 		return color;
 	}
@@ -41,18 +33,12 @@ public class Manzana {
 	public void setEurosKilo(Double eurosKilo){
 		this.eurosKilo = eurosKilo;
 	}
-	public Distribuidor getDistribuidor(){
-		return distribuidor;
-	}
-	public void setDistribuidor(Distribuidor distribuidor){
-		this.distribuidor = distribuidor;
-	}
 	
-	public void crearManzana(){
+	public static void crearManzana(){
 		Scanner sc = new Scanner(System.in);
 		ArrayList<Manzana> manzanas = new ArrayList<Manzana>();
 		
-		System.out.println("\n�Cuantas manzanas quieres insertar?: ");
+		System.out.println("\n¿Cuantas manzanas quieres insertar?: ");
 		int opcion = sc.nextInt();
 		
 		for(int m = 0; m < opcion; m++) {
@@ -64,7 +50,7 @@ public class Manzana {
 			manzana.setProcedencia(sc.next());
 			System.out.println("Color: ");
 			manzana.setColor(sc.next());
-			System.out.println("�/U : ");
+			System.out.println("€/U : ");
 			manzana.setEurosKilo(sc.nextDouble());
 			System.out.println("Nombre del distribuidor: ");
 			Distribuidor distribuidor = new Distribuidor();
@@ -82,8 +68,8 @@ public class Manzana {
 		System.out.println("\nManzanas: \n");
 		
 		for(int m = 0; m < manzanas.size(); m++) {
-			System.out.println("manzana nº" + (m + 1));
-			System.out.println("<><><><><><><><><><><><><><><><><><><><>");
+			System.out.println("Manzana nº" + (m + 1));
+			System.out.println("------------");
 			System.out.println("Tipo de manzana: "+(manzanas.get(m).getTipoManzana()));
 			System.out.println("Prcedencia: "+(manzanas.get(m).getProcedencia()));
 			System.out.println("Color: "+(manzanas.get(m).getColor()));

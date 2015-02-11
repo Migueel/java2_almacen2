@@ -45,7 +45,7 @@ public class Distribuidor {
 		this.personaContacto = personaContacto;
 	}
 	
-	public void leerDistrib(){
+	public static void leerDistrib(){
 		Scanner sc = new Scanner(System.in);
 		ArrayList<Distribuidor> distribuidores = new ArrayList<Distribuidor>();
 		int opcion = sc.nextInt();
@@ -97,20 +97,20 @@ public class Distribuidor {
 				Direccion direc = new Direccion();
 				Contacto contact = new Contacto();
 				
-				System.out.println("\nProveedor n�: " + (i + 1));
-				System.out.println("****************************");
+				System.out.println("\nDistribuidor nº: " + (i + 1));
+				System.out.println("--------------");
 				System.out.println("Nombre: " + (distribuidores.get(i).getNombre()));
 				System.out.println("Cif: " + (distribuidores.get(i).getCif()));
 				direc = distribuidores.get(i).getDireccion();
+				
 				System.out.println("Dirección:");
-				System.out.println("-----------");
 				System.out.println("\tCiudad: " + direc.getCiudad());
 				System.out.println("\tCod.postal: " + direc.getCodigoPostal());
 				System.out.println("\tCalle: " + direc.getCalle());
 				System.out.println("\tCalle: " + direc.getNumero());
 				contact = distribuidores.get(i).getPersonaContacto();
+
 				System.out.println("Contacto:");
-				System.out.println("-----------");
 				System.out.println("\tNombre: " + contact.getNombre());
 				System.out.println("\tApellido: " + contact.getApellido());
 				System.out.println("\tnumero telefonico: " + contact.getTelefono());

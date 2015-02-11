@@ -2,14 +2,12 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 
-public class Leche {
+public class Leche extends Producto{
 
 //propiedades
 	
 	private String tipoLeche;
-	private String procedencia;
 	private Double eurosLitro;
-	private Distribuidor distribuidor;
 
 //constructor
 
@@ -23,29 +21,19 @@ public class Leche {
 	public void setTipoLeche(String tipoLeche) {
 		this.tipoLeche = tipoLeche;
 	}
-	public String getProcedencia(){
-		return procedencia;
-	}
-	public void setProcedencia(String procedencia){
-		this.procedencia = procedencia;
-	}
 	public Double getEurosLitro(){
 		return eurosLitro;
 	}
 	public void setEurosLitro(Double eurosLitro){
 		this.eurosLitro = eurosLitro;
 	}
-	public Distribuidor getDistribuidor(){
-		return distribuidor;
-	}
-	public void setDistribuidor(Distribuidor distribuidor){
-		this.distribuidor = distribuidor;
-	}
-	public void crearLeche() {
+	
+ 
+	public static void crearLeche(){
 		
 		ArrayList<Leche> leches = new ArrayList<Leche>();
 		Scanner sc = new Scanner(System.in);
-		System.out.println("\n¿Cuantas variedades de leche quieres insertar?: ");
+		System.out.println("\nÂ¿Cuantas variedades de leche quieres insertar?: ");
 		int opcion = sc.nextInt();
 		
 		for(int l = 0; l < opcion; l++) {
@@ -54,7 +42,7 @@ public class Leche {
 			leche.setTipoLeche(sc.next());
 			System.out.println("Procedencia de la leche: ");
 			leche.setProcedencia(sc.next());
-			System.out.println("€/litro: ");
+			System.out.println("â‚¬/L: ");
 			leche.setEurosLitro(sc.nextDouble());
 			System.out.println("Nombre del distribuidor: ");
 		
@@ -72,11 +60,12 @@ public class Leche {
 		System.out.println("\nLeche: \n");
 		
 		for(int m = 0; m < leches.size(); m++) {
-			System.out.println("Variedad de leche nº" + (m + 1));
-			System.out.println("************************************");
+			System.out.println("Variedad de leche nÂº" + (m + 1));
+			System.out.println("----------------------");
 			System.out.println("Tipo de leche: "+(leches.get(m).getTipoLeche()));
 			System.out.println("Prcedencia: "+(leches.get(m).getProcedencia()));
-			System.out.println("€/L: "+(leches.get(m).getEurosLitro()));
+			System.out.println("â‚¬/L: "+(leches.get(m).getEurosLitro()));
+			//distribuidor
 			Distribuidor distribuidor = leches.get(m).getDistribuidor();
 			System.out.println("Distribuidor: ");
 			System.out.println("\tNombre: "+distribuidor.getNombre());
@@ -87,7 +76,7 @@ public class Leche {
 			System.out.println("\t\tTelefono: "+(distribuidor.getPersonaContacto()).getTelefono());
 			//direccion
 			System.out.println("\t\tCiudad: "+(distribuidor.getDireccion()).getCiudad());
-			System.out.println("\t\tCódigo postal: "+(distribuidor.getDireccion()).getCodigoPostal());
+			System.out.println("\t\tCÃ³digo postal: "+(distribuidor.getDireccion()).getCodigoPostal());
 			System.out.println("\t\tCalle: "+(distribuidor.getDireccion()).getCalle());
 			System.out.println("\t\tNumero: "+(distribuidor.getDireccion()).getNumero());
 		}

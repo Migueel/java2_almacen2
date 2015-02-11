@@ -49,7 +49,7 @@ public void setDto(Double dto) {
 	this.dto = dto;
 }
 
-public void leerCliente() {
+public static void leerCliente() {
 	ArrayList<Distribuidor> clientes = new ArrayList<Distribuidor>();
 	try{
 		
@@ -67,7 +67,7 @@ public void leerCliente() {
 			String client = sitio[0];
 			String [] sitio2 = client.split(",");
 			cliente.setNombre(sitio2[0]);
-			cliente.setApellido(sitio2[1]);
+			cliente.setApellidos(sitio2[1]);
 			cliente.setDni(sitio[2]);
 			double doble = Double.parseDouble(sitio2[4]);
 			cliente.setNum_socio(doble);
@@ -85,12 +85,12 @@ public void leerCliente() {
 			direccion.setNumero(entero);
 			cliente.setDireccion(direccion);
 			
-			clientes.add(cliente);
-			linea = br.readLine();
+			//clientes.add(cliente);
+			//linea = br.readLine();
 		}
 		for (int c=0;c<clientes.size();c++ ) {
 			Direccion dir = new Direccion();
-			System.out.println("\n Cliente nº: " + (c + 1));
+			System.out.println("\n Cliente nï¿½: " + (c + 1));
 			System.out.println("***********************");
 			System.out.println("Nombre: " + (clientes.get(c).getNombre()));
 		}

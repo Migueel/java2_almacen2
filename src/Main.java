@@ -1,14 +1,9 @@
 import java.util.Scanner;
 import java.util.ArrayList;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.FileInputStream;
-import java.io.InputStreamReader;
-import java.io.BufferedReader;
 
 public class Main{
 	public static void main(String[] args) {
-		menu() {
+		
 			System.out.println("\nMenu:");
 			System.out.println("*******************************************");
 			System.out.println("Mostrar distribuidores------------------1");
@@ -18,7 +13,7 @@ public class Main{
 			System.out.println("Mostrar clientes------------------------5");
 			System.out.println("Salir-----------------------------------0");
 			System.out.println("*******************************************");
-		}
+		
 		
 		Scanner sc = new Scanner(System.in);
 		ArrayList<Distribuidor> distribuidores = new ArrayList<Distribuidor>();
@@ -29,30 +24,30 @@ public class Main{
 			switch(opcion){
 			
 			case 1:
-				distribuidor.leerDistrib();
+			Distribuidor.leerDistrib();
 				break;
 			
 			case 2:	
-				lechuga.crearLechuga();
+				Lechuga.crearLechuga();
 				break;
 			
 			case 3:	
-				manzana.crearManzana();
+				Manzana.crearManzana();
 				break;
 			
 			case 4:
-				leche.crearLeche();
+				Leche.crearLeche();
 				break;
 				
 			case 5:
-				cliente.leerCliente();
-			break;
+				Cliente.leerCliente();
+				break;
+			
 			default:
-			System.out.println("Elige una opciÛn v·lida");
-			break;
+				System.out.println("Elige una opci√≥n v√°lida");
+				break;
 			
 			}
-			menu();
 			opcion = sc.nextInt();
 		}
 	}
